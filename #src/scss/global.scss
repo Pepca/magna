@@ -19,6 +19,12 @@ body {
 
   color: var(--black-color-hsl);
   background-color: var(--white-color-hsl);
+
+  &._lock {
+    overflow: hidden;
+
+    padding-right: var(--scrollBarWidth);
+  }
 }
 
 a {

@@ -1,0 +1,21 @@
+.branches {
+  margin: 130px 0 100px;
+
+  &__title {
+    font-size: 60px;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+  }
+
+  &__map {
+    text-align: center;
+  }
+}
+
+[data-popup] {
+  cursor: pointer;
+}
+
+@import '../modules/popup.scss';

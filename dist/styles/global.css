@@ -8616,6 +8616,11 @@ body {
   background-color: var(--white-color-hsl);
 }
 
+body._lock {
+  overflow: hidden;
+  padding-right: var(--scrollBarWidth);
+}
+
 a {
   display: block;
   color: inherit;
@@ -8697,6 +8702,10 @@ button {
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
+}
+
+._lock .header {
+  padding-right: var(--scrollBarWidth);
 }
 
 .header._fill {
