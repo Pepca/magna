@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @@include('partials/meta.html', { title: 'Главная' })
+    <link rel="stylesheet" href="styles/global.min.css" />
+    <link rel="stylesheet" href="styles/home.min.css" />
+    <script src="scripts/script.min.js" defer></script>
+    <script src="scripts/introSearch.min.js" defer></script>
+    <script src="scripts/headerFixed.min.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('partials/header.html')
+      <section class="intro">
+        <div class="intro__inner _container">
+          <div class="intro__title">Ищешь новый автомобиль?</div>
+          <form action="index.html" class="intro__form form-intro">
+            <div class="form-intro__search">
+              <select name="filter">
+                <option value="Объявления">Объявления</option>
+                <option value="Класс">Класс</option>
+                <option value="Марка">Марка</option>
+                <option value="Модель">Модель</option>
+              </select>
+              <div class="form-intro__icon">
+                <svg
+                  width="57"
+                  height="57"
+                  viewBox="0 0 57 57"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_36_127)">
+                    <path
+                      d="M41.199 7.06867C36.6406 2.51034 30.5803 0 24.1338 0C17.6874 0 11.6269 2.51034 7.06867 7.06867C2.51034 11.6269 0 17.6874 0 24.1337C0 30.5802 2.51034 36.6406 7.06867 41.1989C11.6269 45.7571 17.6875 48.2675 24.1338 48.2675C30.5802 48.2675 36.6406 45.7571 41.199 41.1989C45.7572 36.6406 48.2676 30.5802 48.2676 24.1337C48.2675 17.6874 45.7572 11.6269 41.199 7.06867ZM24.1337 43.6624C13.3655 43.6624 4.60498 34.9019 4.60498 24.1337C4.60498 13.3655 13.3656 4.60498 24.1338 4.60498C34.902 4.60498 43.6624 13.3655 43.6624 24.1337C43.6624 34.9019 34.9019 43.6624 24.1337 43.6624Z"
+                      fill="black"
+                    />
+                    <path
+                      d="M56.3257 53.0695L41.1893 37.9332C40.2901 37.034 38.8323 37.034 37.9331 37.9332C37.034 38.8324 37.034 40.2902 37.9331 41.1894L53.0694 56.3257C53.5189 56.7754 54.1083 57.0001 54.6976 57.0001C55.2868 57.0001 55.8762 56.7754 56.3257 56.3257C57.2248 55.4265 57.2248 53.9687 56.3257 53.0695Z"
+                      fill="black"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_36_127">
+                      <rect width="57" height="57" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <input
+                type="text"
+                placeholder="Поиск по объявлениям..."
+                id="search"
+                name="search"
+              />
+            </div>
+
+            <button type="submit" class="btn _rounding-radius">Найти</button>
+          </form>
+        </div>
+      </section>
+      <section class="news">
+        <div class="news__title _section-title">Главные новости</div>
+        <div class="news__inner _container">
+          <div class="news__content content-news">
+            <ul class="content-news__list">
+              <li class="content-news__item item-content-news">
+                <div class="item-content-news__picture"></div>
+                <div class="item-content-news__info info-item-news">
+                  <div class="info-item-news__title">
+                    Это интересная новость?
+                  </div>
+                  <div class="info-item-news__text">
+                    Задача организации, в особенности же оптимизация основных
+                    целей играет определяющее значение для инновационных методов
+                    управления процессами.
+                  </div>
+                  <div class="info-item-news__button">
+                    <button type="button" class="btn _border">Подробнее</button>
+                  </div>
+                </div>
+              </li>
+              <li class="content-news__item item-content-news">
+                <div class="item-content-news__picture"></div>
+                <div class="item-content-news__info info-item-news">
+                  <div class="info-item-news__title">
+                    Это интересная новость?
+                  </div>
+                  <div class="info-item-news__text">
+                    Задача организации, в особенности же оптимизация основных
+                    целей играет определяющее значение для инновационных методов
+                    управления процессами.
+                  </div>
+                  <div class="info-item-news__button">
+                    <button type="button" class="btn _border">Подробнее</button>
+                  </div>
+                </div>
+              </li>
+              <li class="content-news__item item-content-news">
+                <div class="item-content-news__picture"></div>
+                <div class="item-content-news__info info-item-news">
+                  <div class="info-item-news__title">
+                    Это интересная новость?
+                  </div>
+                  <div class="info-item-news__text">
+                    Задача организации, в особенности же оптимизация основных
+                    целей играет определяющее значение для инновационных методов
+                    управления процессами.
+                  </div>
+                  <div class="info-item-news__button">
+                    <button type="button" class="btn _border">Подробнее</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      @@include('partials/footer.html')
+    </div>
+  </body>
+</html>

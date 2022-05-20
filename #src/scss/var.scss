@@ -1,0 +1,16 @@
+:root {
+  --base-default-color: 0, 0%;
+
+  --black-color-hsl: hsl(var(--base-default-color), 0%);
+  --white-color-hsl: hsl(var(--base-default-color), 100%);
+  --gray-color-hsl: hsl(var(--base-default-color), 77%);
+
+  --max-width-container: 1450px;
+  --max-width: 1920;
+
+  --default-font-size: 30px;
+  --default-font-weight: 400;
+  --defaul-font-family: 'Raleway', sans-serif;
+  --raleway-font-family: 'Raleway', sans-serif;
+  --inter-font-family: 'Inter', sans-serif;
+}

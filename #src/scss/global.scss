@@ -1,0 +1,85 @@
+@import './var.scss';
+@import './function.scss';
+@import './lib.scss';
+@import './fontawesome.scss';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--defaul-font-family);
+  font-style: normal;
+  font-size: var(--default-font-size);
+  font-weight: var(--default-font-weight);
+
+  color: var(--black-color-hsl);
+  background-color: var(--white-color-hsl);
+}
+
+a {
+  display: block;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+
+  font-size: inherit;
+  color: inherit;
+
+  border: none;
+  background-color: transparent;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+._container {
+  max-width: calc(var(--max-width-container) + 30px);
+  width: 100%;
+
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.btn {
+  color: var(--black-color-hsl);
+  background-color: var(--white-color-hsl);
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  &._rounding-radius {
+    border-radius: 40px;
+    padding: 12px 15px;
+  }
+
+  &._border {
+    border: 2px solid var(--black-color-hsl);
+  }
+}
+
+._section-title {
+  font-size: 65px;
+
+  text-align: center;
+
+  margin-bottom: 150px;
+}
+
+// Modules
+@import './modules/header.scss';
+@import './modules/footer.scss';

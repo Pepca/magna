@@ -1,0 +1,129 @@
+.intro {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1),
+      rgba(0, 0, 0, 0.3) 20%
+    ),
+    url('../media/img/intro-bg.jpg') center no-repeat;
+  background-size: cover;
+
+  height: 100vh;
+
+  &__inner {
+    color: var(--white-color-hsl);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    gap: 76px;
+
+    height: 100%;
+  }
+
+  &__title {
+    font-size: 60px;
+  }
+}
+
+.form-intro {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  &__search {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    select {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      height: 100%;
+
+      font-size: 35px;
+
+      background-color: transparent;
+      border: none;
+
+      padding: 0 15px;
+
+      opacity: 0;
+      visibility: hidden;
+
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+
+      ._active & {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    input {
+      font-size: 35px;
+
+      padding: 25px 30px 25px 100px;
+
+      border-radius: 40px;
+
+      background-color: rgba(white, 0.8);
+
+      width: 900px;
+
+      border: none;
+
+      transition: background-color 0.3s ease, padding 0.3s ease, width 0.3s ease;
+
+      ._active & {
+        width: 1000px;
+        padding: 25px 30px 25px 270px;
+      }
+
+      &:focus {
+        background-color: var(--white-color-hsl);
+      }
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    ._active & {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  .btn {
+    font-size: 35px;
+    padding: 25px 28px;
+
+    background-color: rgba(white, 0.8);
+
+    transition: background-color 0.3s ease;
+
+    @media screen and (min-width: 991.98px) {
+      &:hover {
+        background-color: var(--white-color-hsl);
+      }
+    }
+  }
+}
