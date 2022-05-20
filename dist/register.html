@@ -1,4 +1,27 @@
-<header class="header @@fill">
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter&family=Raleway&display=swap&_v=20220520204759"
+  rel="stylesheet"
+/>
+<title>Главная</title>
+
+    <link rel="stylesheet" href="styles/global.min.css?_v=20220520204759" />
+    <link rel="stylesheet" href="styles/auth.min.css?_v=20220520204759" />
+
+    <script src="scripts/script.min.js?_v=20220520204759" defer></script>
+    <script src="https://unpkg.com/imask@6.4.2/dist/imask.js?_v=20220520204759" defer></script>
+    <script src="scripts/mask.min.js?_v=20220520204759" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header _fill">
   <div class="header__inner">
     <div class="header__logo">
       <a href="index.html">
@@ -108,3 +131,185 @@
     </nav>
   </div>
 </header>
+
+      <section class="auth">
+        <div class="auth__inner">
+          <div class="auth__title">Регистрация</div>
+          <form action="login.html" class="auth__form form-auth">
+            <div class="form-auth__inputs-block inputs-block-auth">
+              <ul class="inputs-block-auth__list">
+                <li class="inputs-block-auth__item">
+                  <div class="input-block">
+                    <label for="name" class="input-block__title">Имя</label>
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="name"
+                          id="name"
+                          placeholder="Введите имя"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="inputs-block-auth__item">
+                  <div class="input-block">
+                    <label for="last-name" class="input-block__title"
+                      >Фамилия</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="last-name"
+                          id="last-name"
+                          placeholder="Введите фамилию"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="inputs-block-auth__item">
+                  <div class="input-block">
+                    <label for="middle-name" class="input-block__title"
+                      >Отчество</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="middle-name"
+                          id="middle-name"
+                          placeholder="Введите отчество"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="inputs-block-auth__item">
+                  <div class="input-block">
+                    <label for="tel" class="input-block__title"
+                      >Номер телефона</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="tel"
+                          name="tel"
+                          id="tel"
+                          placeholder="Введите номер телефона"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="inputs-block-auth__item">
+                  <div class="input-block">
+                    <label for="passport-series" class="input-block__title"
+                      >Паспортные данные</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="passport-series"
+                          id="passport-series"
+                          placeholder="Серия"
+                        />
+                      </li>
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="passport-numbers"
+                          id="passport-numbers"
+                          placeholder="Номер"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="inputs-block-auth__item">
+                  <div class="input-block">
+                    <label for="born-date" class="input-block__title"
+                      >Дата рождения</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="born-date"
+                          id="born-date"
+                          placeholder="Число/месяц/год"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="inputs-block-auth__item">
+                  <div class="input-block">
+                    <label for="password" class="input-block__title"
+                      >Пароль</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="password"
+                          name="password"
+                          id="password"
+                          placeholder="Введите пароль"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="inputs-block-auth__item">
+                  <div class="input-block">
+                    <label for="confirm-password" class="input-block__title"
+                      >Подтвердите пароль</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="password"
+                          name="confirm-password"
+                          id="confirm-password"
+                          placeholder="Повторите пароль"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="form-auth__button">
+              <button type="submit" class="btn">Зарегистрироваться</button>
+            </div>
+          </form>
+          <div class="auth__redirect">
+            <span>Есть аккаунт?</span>
+            <a href="login.html">Авторизироваться</a>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+  <div class="footer__inner _container">
+    <nav class="footer__nav nav-footer">
+      <ul class="nav-footer__list">
+        <li class="nav-footer__item"><a href="branches.html">Филиалы</a></li>
+        <li class="nav-footer__item">|</li>
+        <li class="nav-footer__item"><a href="#">Бронирование</a></li>
+        <li class="nav-footer__item">|</li>
+        <li class="nav-footer__item"><a href="#">Профиль</a></li>
+      </ul>
+    </nav>
+    <div class="footer__contact">
+      <span>Контактный номер телефона:</span
+      ><a href="tel:88005553535">8 (800) 555-35-35</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

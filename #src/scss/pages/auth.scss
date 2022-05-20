@@ -1,0 +1,82 @@
+.auth {
+  margin: 120px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__inner {
+    border-radius: 40px;
+    background-color: var(--gray-color-hsl);
+
+    padding: 40px 43px 40px 57px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__redirect {
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    > a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.form-auth {
+  display: flex;
+  flex-direction: column;
+
+  gap: 50px;
+
+  &__button {
+    text-align: center;
+
+    .btn {
+      padding: 6px 75px;
+    }
+
+    > button {
+      transition: transform 0.3s ease;
+
+      @media screen and (min-width: 991.98px) {
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      &:focus {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.inputs-block-auth {
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+  }
+
+  &__item {
+    width: 400px;
+  }
+}
+
+@import '../modules/input.scss';

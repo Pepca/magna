@@ -3,6 +3,8 @@
   --black-color-hsl: hsl(var(--base-default-color), 0%);
   --white-color-hsl: hsl(var(--base-default-color), 100%);
   --gray-color-hsl: hsl(var(--base-default-color), 77%);
+  --header-bg-color-hsl: hsl(var(--base-default-color), 30%);
+  --footer-bg-color-hsl: hsl(var(--base-default-color), 30%);
   --max-width-container: 1450px;
   --max-width: 1920;
   --default-font-size: 30px;
@@ -8630,7 +8632,7 @@ button {
 
 .wrapper {
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8663,6 +8665,22 @@ button {
   border: 2px solid var(--black-color-hsl);
 }
 
+.btn._link {
+  padding: 0;
+}
+
+.btn._link a {
+  width: 100%;
+  height: 100%;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.btn._link._rounding-radius a {
+  padding: 12px 15px;
+  border-radius: 40px;
+}
+
 ._section-title {
   font-size: 65px;
   text-align: center;
@@ -8682,7 +8700,7 @@ button {
 }
 
 .header._fill {
-  background-color: var(--black-color-hsl);
+  background-color: var(--header-bg-color-hsl);
 }
 
 .header__inner {
@@ -8704,7 +8722,7 @@ button {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: calc(100% - 25px);
+  width: 100%;
   height: 3px;
   background-color: var(--white-color-hsl);
   -webkit-transform: translateX(-50%);
@@ -8767,7 +8785,7 @@ button {
 
 .submenu-nav-header {
   position: absolute;
-  top: calc(100% + 2px);
+  top: 100%;
   right: 0;
   z-index: 10;
   opacity: 0;
@@ -8899,7 +8917,7 @@ button {
 .footer {
   margin-top: auto;
   color: var(--white-color-hsl);
-  background-color: var(--black-color-hsl);
+  background-color: var(--footer-bg-color-hsl);
 }
 
 .footer__inner {

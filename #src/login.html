@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @@include('partials/meta.html', { title: 'Главная' })
+    <link rel="stylesheet" href="styles/global.min.css" />
+    <link rel="stylesheet" href="styles/auth.min.css" />
+
+    <script src="scripts/script.min.js" defer></script>
+    <script src="https://unpkg.com/imask@6.4.2/dist/imask.js" defer></script>
+    <script src="scripts/mask.min.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('partials/header.html', { fill: '_fill' })
+      <section class="auth">
+        <div class="auth__inner">
+          <div class="auth__title">Авторизация</div>
+          <form action="login.html" class="auth__form form-auth">
+            <div class="form-auth__inputs-block inputs-block-auth">
+              <ul class="inputs-block-auth__list">
+                <li class="inputs-block-auth__item">
+                  <div class="input-block">
+                    <label for="tel" class="input-block__title"
+                      >Номер телефона</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="tel"
+                          name="tel"
+                          id="tel"
+                          placeholder="Введите номер телефона"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="inputs-block-auth__item">
+                  <div class="input-block">
+                    <label for="password" class="input-block__title"
+                      >Пароль</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="password"
+                          name="password"
+                          id="password"
+                          placeholder="Введите пароль"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="form-auth__button">
+              <button type="submit" class="btn">Войти</button>
+            </div>
+          </form>
+          <div class="auth__redirect">
+            <span>Нет аккаунта?</span>
+            <a href="register.html">Зарегистрироваться</a>
+          </div>
+        </div>
+      </section>
+      @@include('partials/footer.html')
+    </div>
+  </body>
+</html>
