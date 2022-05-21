@@ -61,6 +61,15 @@
   height: 300px;
   background-color: var(--white-color-hsl);
   border-radius: 20px;
+  overflow: hidden;
+}
+
+.product-item__picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .product-item__head {
