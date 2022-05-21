@@ -1,3 +1,6 @@
+@import '../modules/popup.scss';
+@import '../modules/product-item.scss';
+
 .branches {
   margin: 130px 0 100px;
 
@@ -18,4 +21,14 @@
   cursor: pointer;
 }
 
-@import '../modules/popup.scss';
+.product-item {
+  background-color: var(--white-color-hsl);
+
+  &__picture {
+    background-color: var(--gray-color-hsl);
+  }
+}
+
+.popup__title {
+  font-size: 35px;
+}

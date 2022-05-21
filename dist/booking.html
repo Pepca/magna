@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  href="https://fonts.googleapis.com/css2?family=Inter&family=Raleway&display=swap&_v=20220521160956"
+  rel="stylesheet"
+/>
+<title>Филиалы</title>
+
+    <link rel="stylesheet" href="styles/global.min.css?_v=20220521160956" />
+    <link rel="stylesheet" href="styles/booking.min.css?_v=20220521160956" />
+    <script src="scripts/script.min.js?_v=20220521160956" defer></script>
+    <script src="https://unpkg.com/imask@6.4.2/dist/imask.js?_v=20220521160956" defer></script>
+    <script src="scripts/mask.min.js?_v=20220521160956" defer></script>
+    <script src="scripts/popup.min.js?_v=20220521160956" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="popup" id="booking">
+        <div class="popup__inner">
+          <div class="popup__close"><span></span></div>
+          <div class="popup__title">Форма аренды</div>
+          <div class="popup__content">
+            <form action="profile.html" class="popup-form">
+              <ul class="popup-form__list">
+                <li class="popup-form__item">
+                  <div class="input-block">
+                    <label for="card-numbers" class="input-block__title"
+                      >Номер карты</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="card-numbers"
+                          id="card-numbers"
+                          placeholder="Введите номер карты"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="popup-form__item">
+                  <div class="input-block">
+                    <label for="card-holder" class="input-block__title"
+                      >Владелец карты</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="card-holder-name"
+                          id="card-holder"
+                          placeholder="Имя"
+                        />
+                      </li>
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="card-holder-last-name"
+                          id="card-holder"
+                          placeholder="Фамилия"
+                        />
+                      </li>
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="card-holder-middle-name"
+                          id="card-holder"
+                          placeholder="Отчество"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="popup-form__item">
+                  <div class="input-block">
+                    <label for="passport-series" class="input-block__title"
+                      >Паспортные данные</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="passport-series"
+                          id="passport-series"
+                          placeholder="Серия"
+                        />
+                      </li>
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="passport-numbers"
+                          id="passport-numbers"
+                          placeholder="Номер"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="popup-form__item">
+                  <div class="input-block">
+                    <label for="born-date" class="input-block__title"
+                      >Дата рождения</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="text"
+                          name="born-date"
+                          id="born-date"
+                          placeholder="Число/месяц/год"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="popup-form__item">
+                  <div class="input-block">
+                    <label for="tel" class="input-block__title"
+                      >Номер телефона</label
+                    >
+                    <ul class="input-block__list">
+                      <li class="input-block__item">
+                        <input
+                          type="tel"
+                          name="tel"
+                          id="tel"
+                          placeholder="Введите номер телефона"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <div class="popup-form__button">
+                <button type="submit" class="btn">Забронировать</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <header class="header _fill">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="index.html">
+        <img src="media/icon/logo.svg" alt="Логотип">
+      </a>
+    </div>
+    <nav class="header__nav nav-header">
+      <ul class="nav-header__list">
+        <li class="nav-header__item">
+          <a href="branches.html"> Филиалы </a>
+        </li>
+        <li class="nav-header__item">
+          <a href="booking.html"> Бронирование </a>
+        </li>
+        <li class="nav-header__item _submenu">
+          <button type="button">
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 59 59"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M29.5 29.5C32.0526 29.5 34.5479 28.7431 36.6703 27.3249C38.7928 25.9068 40.447 23.8911 41.4238 21.5328C42.4007 19.1745 42.6563 16.5794 42.1583 14.0759C41.6603 11.5723 40.4311 9.27263 38.6261 7.46766C36.8211 5.66269 34.5215 4.43349 32.0179 3.9355C29.5143 3.43751 26.9193 3.69309 24.561 4.66994C22.2027 5.64678 20.187 7.30101 18.7688 9.42343C17.3507 11.5458 16.5938 14.0411 16.5938 16.5938C16.5938 20.0167 17.9535 23.2995 20.3739 25.7199C22.7943 28.1402 26.077 29.5 29.5 29.5ZM29.5 7.37501C31.3233 7.37501 33.1056 7.91568 34.6217 8.92865C36.1377 9.94161 37.3193 11.3814 38.017 13.0659C38.7148 14.7504 38.8973 16.604 38.5416 18.3922C38.1859 20.1805 37.3079 21.8231 36.0186 23.1124C34.7294 24.4017 33.0868 25.2797 31.2985 25.6354C29.5102 25.9911 27.6566 25.8085 25.9721 25.1108C24.2876 24.413 22.8479 23.2314 21.8349 21.7154C20.8219 20.1994 20.2812 18.4171 20.2812 16.5938C20.2812 14.1488 21.2525 11.804 22.9814 10.0751C24.7102 8.34626 27.055 7.37501 29.5 7.37501Z"
+                fill="white"
+              />
+              <path
+                d="M31.3438 33.1875H27.6562C22.2773 33.1875 17.1187 35.3243 13.3152 39.1277C9.51177 42.9312 7.375 48.0898 7.375 53.4688C7.375 53.9577 7.56925 54.4267 7.91502 54.7725C8.26079 55.1182 8.72976 55.3125 9.21875 55.3125H49.7812C50.2702 55.3125 50.7392 55.1182 51.085 54.7725C51.4307 54.4267 51.625 53.9577 51.625 53.4688C51.625 48.0898 49.4882 42.9312 45.6848 39.1277C41.8813 35.3243 36.7227 33.1875 31.3438 33.1875ZM11.1731 51.625C11.6265 47.5699 13.558 43.8241 16.5987 41.1031C19.6393 38.3822 23.5759 36.8769 27.6562 36.875H31.3438C35.4241 36.8769 39.3607 38.3822 42.4013 41.1031C45.442 43.8241 47.3735 47.5699 47.8269 51.625H11.1731Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+          <div class="nav-header__submenu submenu-nav-header">
+            <ul class="submenu-nav-header__list">
+              <li class="submenu-nav-header__item">
+                <div class="profile-submenu">
+                  <div class="profile-submenu__avatar"><a href="profile.html"></a></div>
+                  <div class="profile-submenu__name">Гость</div>
+                </div>
+              </li>
+              <li class="submenu-nav-header__item">
+                <button type="button" class="btn _rounding-radius _link">
+                  <a href="login.html"> Войти </a>
+                </button>
+                <button type="button" class="btn _rounding-radius _link">
+                  <a href="register.html"> Регистрация </a>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+      <section class="booking">
+        <div class="booking__inner">
+          <aside class="booking__filters filters-booking">
+            <div class="filters-booking__inner">
+              <form
+                action="booking.html"
+                class="filter-booking__search-form search-form-booking-filter"
+              >
+                <div class="input-block">
+                  <ul class="input-block__list">
+                    <li class="input-block__item">
+                      <input
+                        type="text"
+                        name="search"
+                        id="search"
+                        placeholder="Поиск по объявлениям"
+                      />
+                    </li>
+                  </ul>
+                </div>
+                <div class="search-form-booking-filter__button">
+                  <button type="submit" class="btn">Поиск</button>
+                </div>
+              </form>
+              <form
+                action="booking.html"
+                class="filters-booking__sorting-form sorting-form-booking-filter"
+              >
+                <ul class="sorting-form-booking-filter__list">
+                  <li
+                    class="sorting-form-booking-filter__item item-sorting-form"
+                  >
+                    <div class="item-sorting-form__title">Класс автомобиля</div>
+                    <div
+                      class="item-sorting-form__content content-item-sorting"
+                    >
+                      <ul class="content-item-sorting__list">
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="class"
+                            value="Эконом"
+                            id="class-1"
+                          />
+                          <label for="class-1">Эконом</label>
+                        </li>
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="class"
+                            value="Премиум"
+                            id="class-2"
+                          />
+                          <label for="class-2">Премиум</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li
+                    class="sorting-form-booking-filter__item item-sorting-form"
+                  >
+                    <div class="item-sorting-form__title">Марка автомобиля</div>
+                    <div
+                      class="item-sorting-form__content content-item-sorting"
+                    >
+                      <ul class="content-item-sorting__list">
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="mark"
+                            value="Марка - 1"
+                            id="mark-1"
+                          />
+                          <label for="mark-1">Марка - 1</label>
+                        </li>
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="mark"
+                            value="Марка - 2"
+                            id="mark-2"
+                          />
+                          <label for="mark-2">Марка - 2</label>
+                        </li>
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="mark"
+                            value="Марка - 3"
+                            id="mark-3"
+                          />
+                          <label for="mark-3">Марка - 3</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li
+                    class="sorting-form-booking-filter__item item-sorting-form"
+                  >
+                    <div class="item-sorting-form__title">
+                      Модель автомобиля
+                    </div>
+                    <div
+                      class="item-sorting-form__content content-item-sorting"
+                    >
+                      <ul class="content-item-sorting__list">
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="model"
+                            value="Модель - 1"
+                            id="model-1"
+                          />
+                          <label for="model-1">Модель - 1</label>
+                        </li>
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="model"
+                            value="Модель - 2"
+                            id="model-2"
+                          />
+                          <label for="model-2">Модель - 2</label>
+                        </li>
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="model"
+                            value="Модель - 3"
+                            id="model-3"
+                          />
+                          <label for="model-3">Модель - 3</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li
+                    class="sorting-form-booking-filter__item item-sorting-form"
+                  >
+                    <div class="item-sorting-form__title">Цвет автомобиля</div>
+                    <div
+                      class="item-sorting-form__content content-item-sorting"
+                    >
+                      <ul class="content-item-sorting__list">
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="color"
+                            value="Красный"
+                            id="color-1"
+                          />
+                          <label for="color-1">Красный</label>
+                        </li>
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="color"
+                            value="Синий"
+                            id="color-2"
+                          />
+                          <label for="color-2">Синий</label>
+                        </li>
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="color"
+                            value="Зеленый"
+                            id="color-3"
+                          />
+                          <label for="color-3">Зеленый</label>
+                        </li>
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="color"
+                            value="Черный"
+                            id="color-4"
+                          />
+                          <label for="color-4">Черный</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li
+                    class="sorting-form-booking-filter__item item-sorting-form"
+                  >
+                    <div class="item-sorting-form__title">Тип двигателя</div>
+                    <div
+                      class="item-sorting-form__content content-item-sorting"
+                    >
+                      <ul class="content-item-sorting__list">
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="engine-type"
+                            value="Бензинный"
+                            id="engine-type-1"
+                          />
+                          <label for="engine-type-1">Бензинный</label>
+                        </li>
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="engine-type"
+                            value="Дизельный"
+                            id="engine-type-2"
+                          />
+                          <label for="engine-type-2">Дизельный</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li
+                    class="sorting-form-booking-filter__item item-sorting-form"
+                  >
+                    <div class="item-sorting-form__title">Коробка передач</div>
+                    <div
+                      class="item-sorting-form__content content-item-sorting"
+                    >
+                      <ul class="content-item-sorting__list">
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="Transmission"
+                            value="МКП"
+                            id="Transmission-1"
+                          />
+                          <label for="Transmission-1">МКП</label>
+                        </li>
+                        <li class="content-item-sorting__item">
+                          <input
+                            type="checkbox"
+                            name="Transmission"
+                            value="АКП"
+                            id="Transmission-2"
+                          />
+                          <label for="Transmission-2">АКП</label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+                <div class="sorting-form-booking-filter__actions">
+                  <button type="reset" class="btn">Отменить</button>
+                  <button type="submit" class="btn">Сортировать</button>
+                </div>
+              </form>
+            </div>
+          </aside>
+          <div class="booking__content content-booking">
+            <ul class="content-booking__list">
+              <li class="content-booking__item">
+                <div class="product-item">
+                  <div class="product-item__picture"></div>
+                  <div class="product-item__name">Chevrolet</div>
+                  <div class="product-item__model">Spark</div>
+                  <div class="product-item__date">20.07.2022 - 20.07.2022</div>
+                  <div class="product-item__day">1 день</div>
+                  <div class="product-item__branch">г. Барнаул филиал №1</div>
+                  <div class="product-item__price">от 2990₽ / сутки</div>
+                  <div class="product-item__total">Всего: 2990₽</div>
+                  <div class="product-item__button">
+                    <button type="button" class="btn" data-popup="booking">
+                      Арендовать
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="content-booking__item">
+                <div class="product-item">
+                  <div class="product-item__picture"></div>
+                  <div class="product-item__name">Chevrolet</div>
+                  <div class="product-item__model">Spark</div>
+                  <div class="product-item__date">20.07.2022 - 20.07.2022</div>
+                  <div class="product-item__day">1 день</div>
+                  <div class="product-item__branch">г. Барнаул филиал №1</div>
+                  <div class="product-item__price">от 2990₽ / сутки</div>
+                  <div class="product-item__total">Всего: 2990₽</div>
+                  <div class="product-item__button">
+                    <button type="button" class="btn" data-popup="booking">
+                      Арендовать
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="content-booking__item">
+                <div class="product-item">
+                  <div class="product-item__picture"></div>
+                  <div class="product-item__name">Chevrolet</div>
+                  <div class="product-item__model">Spark</div>
+                  <div class="product-item__date">20.07.2022 - 20.07.2022</div>
+                  <div class="product-item__day">1 день</div>
+                  <div class="product-item__branch">г. Барнаул филиал №1</div>
+                  <div class="product-item__price">от 2990₽ / сутки</div>
+                  <div class="product-item__total">Всего: 2990₽</div>
+                  <div class="product-item__button">
+                    <button type="button" class="btn" data-popup="booking">
+                      Арендовать
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="content-booking__item">
+                <div class="product-item">
+                  <div class="product-item__picture"></div>
+                  <div class="product-item__name">Chevrolet</div>
+                  <div class="product-item__model">Spark</div>
+                  <div class="product-item__date">20.07.2022 - 20.07.2022</div>
+                  <div class="product-item__day">1 день</div>
+                  <div class="product-item__branch">г. Барнаул филиал №1</div>
+                  <div class="product-item__price">от 2990₽ / сутки</div>
+                  <div class="product-item__total">Всего: 2990₽</div>
+                  <div class="product-item__button">
+                    <button type="button" class="btn" data-popup="booking">
+                      Арендовать
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="content-booking__item">
+                <div class="product-item">
+                  <div class="product-item__picture"></div>
+                  <div class="product-item__name">Chevrolet</div>
+                  <div class="product-item__model">Spark</div>
+                  <div class="product-item__date">20.07.2022 - 20.07.2022</div>
+                  <div class="product-item__day">1 день</div>
+                  <div class="product-item__branch">г. Барнаул филиал №1</div>
+                  <div class="product-item__price">от 2990₽ / сутки</div>
+                  <div class="product-item__total">Всего: 2990₽</div>
+                  <div class="product-item__button">
+                    <button type="button" class="btn" data-popup="booking">
+                      Арендовать
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="content-booking__item">
+                <div class="product-item">
+                  <div class="product-item__picture"></div>
+                  <div class="product-item__name">Chevrolet</div>
+                  <div class="product-item__model">Spark</div>
+                  <div class="product-item__date">20.07.2022 - 20.07.2022</div>
+                  <div class="product-item__day">1 день</div>
+                  <div class="product-item__branch">г. Барнаул филиал №1</div>
+                  <div class="product-item__price">от 2990₽ / сутки</div>
+                  <div class="product-item__total">Всего: 2990₽</div>
+                  <div class="product-item__button">
+                    <button type="button" class="btn" data-popup="booking">
+                      Арендовать
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="content-booking__item">
+                <div class="product-item">
+                  <div class="product-item__picture"></div>
+                  <div class="product-item__name">Chevrolet</div>
+                  <div class="product-item__model">Spark</div>
+                  <div class="product-item__date">20.07.2022 - 20.07.2022</div>
+                  <div class="product-item__day">1 день</div>
+                  <div class="product-item__branch">г. Барнаул филиал №1</div>
+                  <div class="product-item__price">от 2990₽ / сутки</div>
+                  <div class="product-item__total">Всего: 2990₽</div>
+                  <div class="product-item__button">
+                    <button type="button" class="btn" data-popup="booking">
+                      Арендовать
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="content-booking__item">
+                <div class="product-item">
+                  <div class="product-item__picture"></div>
+                  <div class="product-item__name">Chevrolet</div>
+                  <div class="product-item__model">Spark</div>
+                  <div class="product-item__date">20.07.2022 - 20.07.2022</div>
+                  <div class="product-item__day">1 день</div>
+                  <div class="product-item__branch">г. Барнаул филиал №1</div>
+                  <div class="product-item__price">от 2990₽ / сутки</div>
+                  <div class="product-item__total">Всего: 2990₽</div>
+                  <div class="product-item__button">
+                    <button type="button" class="btn" data-popup="booking">
+                      Арендовать
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="content-booking__item">
+                <div class="product-item">
+                  <div class="product-item__picture"></div>
+                  <div class="product-item__name">Chevrolet</div>
+                  <div class="product-item__model">Spark</div>
+                  <div class="product-item__date">20.07.2022 - 20.07.2022</div>
+                  <div class="product-item__day">1 день</div>
+                  <div class="product-item__branch">г. Барнаул филиал №1</div>
+                  <div class="product-item__price">от 2990₽ / сутки</div>
+                  <div class="product-item__total">Всего: 2990₽</div>
+                  <div class="product-item__button">
+                    <button type="button" class="btn" data-popup="booking">
+                      Арендовать
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <footer class="footer">
+  <div class="footer__inner _container">
+    <nav class="footer__nav nav-footer">
+      <ul class="nav-footer__list">
+        <li class="nav-footer__item"><a href="branches.html">Филиалы</a></li>
+        <li class="nav-footer__item">|</li>
+        <li class="nav-footer__item"><a href="booking.html">Бронирование</a></li>
+        <li class="nav-footer__item">|</li>
+        <li class="nav-footer__item"><a href="profile.html">Профиль</a></li>
+      </ul>
+    </nav>
+    <div class="footer__contact">
+      <span>Контактный номер телефона:</span
+      ><a href="tel:88005553535">8 (800) 555-35-35</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+  </body>
+</html>

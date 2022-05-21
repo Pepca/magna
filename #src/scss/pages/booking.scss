@@ -1,0 +1,170 @@
+@import '../modules/input.scss';
+@import '../modules/product-item.scss';
+@import '../modules/popup.scss';
+
+.booking {
+  margin: 140px 0;
+
+  &__inner {
+    display: flex;
+
+    gap: 50px;
+  }
+}
+
+.filters-booking {
+  position: sticky;
+  top: 100px;
+  left: 0;
+
+  height: 100%;
+
+  animation: sidebarInit .4s ease forwards;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    background-color: var(--gray-color-hsl);
+
+    padding: 20px;
+
+    border-radius: 0 40px 40px 0;
+
+    max-height: 800px;
+    overflow: auto;
+  }
+}
+
+.search-form-booking-filter {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid var(--black-color-hsl);
+
+  &__button {
+    .btn {
+      font-size: 20px;
+    }
+  }
+}
+
+.sorting-form-booking-filter {
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+    padding-top: 20px;
+
+    justify-content: space-around;
+
+    border-top: 1px solid var(--black-color-hsl);
+
+    .btn {
+      font-size: 25px;
+
+      transition: transform 0.3s ease;
+
+      &:focus {
+        transform: scale(1.1);
+      }
+
+      @media screen and (min-width: 991.98px) {
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.item-sorting-form {
+  &__title {
+    margin-bottom: 15px;
+  }
+}
+
+.content-item-sorting {
+  font-size: 25px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-left: 20px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    input {
+      cursor: pointer;
+
+      width: 20px;
+      height: 20px;
+    }
+
+    label {
+      cursor: pointer;
+    }
+  }
+}
+
+.content-booking {
+  &__list {
+    display: flex;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+    row-gap: 30px;
+  }
+}
+
+.popup-form {
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  &__item {
+    width: 500px;
+  }
+}
+
+.input-block__list {
+  gap: 25px;
+}
+
+@keyframes sidebarInit {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
