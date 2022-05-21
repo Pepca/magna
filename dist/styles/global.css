@@ -1,10 +1,14 @@
 :root {
   --base-default-color: 0, 0%;
+  --base-red-color: 0, 70%;
+  --base-green-color: 79, 80%;
   --black-color-hsl: hsl(var(--base-default-color), 0%);
   --white-color-hsl: hsl(var(--base-default-color), 100%);
   --gray-color-hsl: hsl(var(--base-default-color), 77%);
   --header-bg-color-hsl: hsl(var(--base-default-color), 30%);
   --footer-bg-color-hsl: hsl(var(--base-default-color), 30%);
+  --red-color-hsl: hsl(var(--base-red-color), 45%);
+  --green-color-hsl: hsl(var(--base-green-color), 70%);
   --max-width-container: 1450px;
   --max-width: 1920;
   --default-font-size: 30px;

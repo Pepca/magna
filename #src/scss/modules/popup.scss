@@ -29,7 +29,11 @@
 
     border-radius: 40px;
 
-    padding: 20px 80px 20px 40px;
+    padding: 20px 80px 30px 40px;
+  }
+
+  &__title {
+    text-align: center;
   }
 
   &__close {
@@ -68,6 +72,33 @@
 
       &:after {
         transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 40px;
+  }
+
+  &-form {
+    &__button {
+      margin-top: 60px;
+      text-align: center;
+
+      .btn {
+        padding: 10px 40px;
+
+        transition: transform 0.3s ease;
+
+        &:focus {
+          transform: scale(1.1);
+        }
+
+        @media screen and (min-width: 991.98px) {
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
       }
     }
   }

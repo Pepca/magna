@@ -1,0 +1,181 @@
+.bank-card-item {
+  position: relative;
+  width: 600px;
+  height: 350px;
+
+  background-color: var(--gray-color-hsl);
+  border-radius: 40px;
+
+  padding: 30px 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  &._mir {
+    background-color: hsl(var(--base-default-color), 85%);
+  }
+
+  &._mastercard {
+    background-color: var(--green-color-hsl);
+  }
+
+  &__card-logo {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+  }
+}
+
+.info-bank-card {
+  font-size: 25px;
+
+  max-width: 280px;
+  width: 100%;
+}
+
+.details-bank-card {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-bottom: 10px;
+
+  height: 30px;
+
+  overflow: hidden;
+
+  transition: height 0.4s ease;
+
+  ._show-more & {
+    height: 150px;
+  }
+
+  &__number {
+    display: flex;
+    flex-direction: column;
+
+    .hide {
+      display: block;
+
+      ._show-more & {
+        display: none;
+      }
+    }
+
+    .show {
+      display: none;
+
+      ._show-more & {
+        display: block;
+      }
+    }
+  }
+
+  &__date {
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    ._show-more & {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__secure {
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    ._show-more & {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__delete {
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+
+    ._show-more & {
+      opacity: 1;
+      visibility: visible;
+    }
+    button {
+      cursor: pointer;
+
+      position: relative;
+
+      color: var(--red-color-hsl);
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+
+        background-color: var(--red-color-hsl);
+
+        transform: scale(0);
+
+        transition: transform 0.3s ease;
+      }
+      &:focus {
+        &:after {
+          transform: scale(1);
+        }
+      }
+
+      @media screen and (min-width: 991.98px) {
+        &:hover {
+          &:after {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.bank-card-plus {
+  cursor: pointer;
+
+  width: 100px;
+  height: 100px;
+
+  background-color: var(--gray-color-hsl);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 100%;
+
+  color: var(--white-color-hsl);
+
+  font-size: 100px;
+
+  transition: transform 0.3s ease;
+
+  &:focus {
+    transform: scale(1.1);
+  }
+
+  @media screen and (min-width: 991.98px) {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

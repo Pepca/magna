@@ -1,0 +1,206 @@
+@import '../modules/popup.scss';
+@import '../modules/bank-card.scss';
+@import '../modules/input.scss';
+@import '../modules/product-item.scss';
+
+.profile {
+  margin: 160px 0 60px;
+
+  &__inner {
+    display: flex;
+
+    gap: 60px;
+  }
+}
+
+.sidebar-profile {
+  position: sticky;
+  top: 100px;
+  left: 0;
+
+  height: 100%;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 40px;
+
+    max-width: 370px;
+    width: 100%;
+
+    padding: 30px;
+
+    border-radius: 0 40px 40px 0;
+    background-color: var(--gray-color-hsl);
+
+    text-align: center;
+
+    animation: sidebarInit 0.5s ease forwards;
+  }
+}
+
+.avatar-profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 50px;
+
+  &__picture {
+    position: relative;
+
+    width: 190px;
+    height: 190px;
+
+    background-color: var(--white-color-hsl);
+
+    border-radius: 100%;
+
+    &:after {
+      content: '';
+
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: var(--black-color-hsl);
+    }
+  }
+
+  &__name {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}
+
+.details-profile-sidebar {
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
+  }
+}
+
+.item-details-sidebar {
+  font-size: 25px;
+  &__title {
+    margin-bottom: 7px;
+  }
+}
+
+.actions-profile-sidebar {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+
+  &__button {
+    width: 100%;
+
+    .btn {
+      position: relative;
+      // width: 100%;
+
+      padding: 0;
+
+      background-color: transparent;
+
+      transition: transform 0.3s ease;
+
+      &:after {
+        content: '';
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        height: 1px;
+
+        background-color: var(--black-color-hsl);
+
+        transform: scale(0);
+
+        transition: transform 0.3s ease;
+      }
+
+      &:focus {
+        outline: none;
+
+        &:after {
+          transform: scale(1);
+        }
+      }
+
+      @media screen and (min-width: 991.98px) {
+        &:hover {
+          &:after {
+            transform: scale(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.content-profile {
+  display: flex;
+  flex-direction: column;
+
+  flex: 0 1 75%;
+
+  gap: 100px;
+}
+
+.bank-cards-profile {
+  &__list {
+    display: flex;
+    align-items: center;
+
+    gap: 35px;
+  }
+}
+
+.history-content-profile {
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    gap: 30px;
+    row-gap: 50px;
+  }
+}
+
+.popup-form {
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+  }
+  &__item {
+    width: 400px;
+  }
+}
+
+._profile-block-title {
+  font-size: 60px;
+
+  margin-bottom: 30px;
+}
+
+@keyframes sidebarInit {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

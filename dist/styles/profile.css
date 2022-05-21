@@ -1,0 +1,682 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  -o-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.popup._open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup__inner {
+  position: relative;
+  background-color: var(--gray-color-hsl);
+  border-radius: 40px;
+  padding: 20px 80px 30px 40px;
+}
+
+.popup__title {
+  text-align: center;
+}
+
+.popup__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.popup__close span {
+  display: block;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.popup__close span:before,
+.popup__close span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--black-color-hsl);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.popup__close span:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.popup__close span:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.popup__content {
+  margin-top: 40px;
+}
+
+.popup-form__button {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.popup-form__button .btn {
+  padding: 10px 40px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.popup-form__button .btn:focus {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.bank-card-item {
+  position: relative;
+  width: 600px;
+  height: 350px;
+  background-color: var(--gray-color-hsl);
+  border-radius: 40px;
+  padding: 30px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+
+.bank-card-item._mir {
+  background-color: hsl(var(--base-default-color), 85%);
+}
+
+.bank-card-item._mastercard {
+  background-color: var(--green-color-hsl);
+}
+
+.bank-card-item__card-logo {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+}
+
+.info-bank-card {
+  font-size: 25px;
+  max-width: 280px;
+  width: 100%;
+}
+
+.details-bank-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  overflow: hidden;
+  -webkit-transition: height 0.4s ease;
+  -o-transition: height 0.4s ease;
+  transition: height 0.4s ease;
+}
+
+._show-more .details-bank-card {
+  height: 150px;
+}
+
+.details-bank-card__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.details-bank-card__number .hide {
+  display: block;
+}
+
+._show-more .details-bank-card__number .hide {
+  display: none;
+}
+
+.details-bank-card__number .show {
+  display: none;
+}
+
+._show-more .details-bank-card__number .show {
+  display: block;
+}
+
+.details-bank-card__date {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  -o-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+._show-more .details-bank-card__date {
+  opacity: 1;
+  visibility: visible;
+}
+
+.details-bank-card__secure {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  -o-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+._show-more .details-bank-card__secure {
+  opacity: 1;
+  visibility: visible;
+}
+
+.details-bank-card__delete {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+  -o-transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+._show-more .details-bank-card__delete {
+  opacity: 1;
+  visibility: visible;
+}
+
+.details-bank-card__delete button {
+  cursor: pointer;
+  position: relative;
+  color: var(--red-color-hsl);
+}
+
+.details-bank-card__delete button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--red-color-hsl);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.details-bank-card__delete button:focus:after {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.bank-card-plus {
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  background-color: var(--gray-color-hsl);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100%;
+  color: var(--white-color-hsl);
+  font-size: 100px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.bank-card-plus:focus {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.input-block {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.input-block__title {
+  font-size: 20px;
+}
+
+.input-block__list {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+}
+
+.input-block__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.input-block__item > input {
+  width: 100%;
+  font-size: 20px;
+  border-radius: 12px;
+  padding: 12px 15px;
+  border: none;
+}
+
+.product-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  background-color: var(--gray-color-hsl);
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.product-item__picture {
+  width: 100%;
+  height: 300px;
+  background-color: var(--white-color-hsl);
+  border-radius: 20px;
+}
+
+.product-item__head {
+  opacity: 0.5;
+}
+
+.product-item__name {
+  text-align: center;
+  font-size: 40px;
+}
+
+.product-item__model {
+  text-align: center;
+}
+
+.product-item__date {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20px;
+}
+
+.product-item__day {
+  text-align: center;
+}
+
+.product-item__branch {
+  margin-top: 20px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.product-item__price {
+  text-align: center;
+  font-size: 25px;
+}
+
+.product-item__total {
+  font-size: 35px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.product-item__button {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.product-item__button .btn {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.product-item__button .btn:focus {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.product-item__extrainfo {
+  margin-top: 20px;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+.profile {
+  margin: 160px 0 60px;
+}
+
+.profile__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 60px;
+}
+
+.sidebar-profile {
+  position: sticky;
+  top: 100px;
+  left: 0;
+  height: 100%;
+}
+
+.sidebar-profile__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+  max-width: 370px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 0 40px 40px 0;
+  background-color: var(--gray-color-hsl);
+  text-align: center;
+  -webkit-animation: sidebarInit 0.5s ease forwards;
+          animation: sidebarInit 0.5s ease forwards;
+}
+
+.avatar-profile-sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+}
+
+.avatar-profile-sidebar__picture {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  background-color: var(--white-color-hsl);
+  border-radius: 100%;
+}
+
+.avatar-profile-sidebar__picture:after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--black-color-hsl);
+}
+
+.avatar-profile-sidebar__name {
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.details-profile-sidebar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 35px;
+}
+
+.item-details-sidebar {
+  font-size: 25px;
+}
+
+.item-details-sidebar__title {
+  margin-bottom: 7px;
+}
+
+.actions-profile-sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.actions-profile-sidebar__button {
+  width: 100%;
+}
+
+.actions-profile-sidebar__button .btn {
+  position: relative;
+  padding: 0;
+  background-color: transparent;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.actions-profile-sidebar__button .btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--black-color-hsl);
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.actions-profile-sidebar__button .btn:focus {
+  outline: none;
+}
+
+.actions-profile-sidebar__button .btn:focus:after {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+.content-profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 75%;
+          flex: 0 1 75%;
+  gap: 100px;
+}
+
+.bank-cards-profile__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 35px;
+}
+
+.history-content-profile__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+  row-gap: 50px;
+}
+
+.popup-form__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+}
+
+.popup-form__item {
+  width: 400px;
+}
+
+._profile-block-title {
+  font-size: 60px;
+  margin-bottom: 30px;
+}
+
+@-webkit-keyframes sidebarInit {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes sidebarInit {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 991.98px) {
+  .popup-form__button .btn:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  .details-bank-card__delete button:hover:after {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
+
+  .bank-card-plus:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  .product-item__button .btn:hover {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  .actions-profile-sidebar__button .btn:hover:after {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
+}
